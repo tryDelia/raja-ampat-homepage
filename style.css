@@ -1,0 +1,42 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgba(227, 226, 226, 0.989);
+    min-height: 100dvh;
+    overflow: hidden;
+}
+.hero-section {
+    background-image: url(/img/Sunset\ Raja\ Ampat.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 12.5rem;
+    
+    & .hero-title {
+        background: rgba(178, 67, 67, 0.671);
+        font-size: 1.3rem;
+        padding: 3px 7px;
+        border-radius: 5px;
+        text-shadow: 10px 10px 20px black;
+        margin-bottom: 0.7rem;
+    }
+    & .hero-text {
+        background: rgba(84, 123, 177, 0.671);
+        font-size: 0.9rem;
+        padding: 5px 10px;
+        border-radius: 5px;
+        text-shadow: 10px 10px 20px black;
+        margin-bottom: 0.7rem;
+    }
+}
