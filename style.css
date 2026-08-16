@@ -6,37 +6,97 @@
     box-sizing: border-box;
 }
 body {
-    background-color: rgba(227, 226, 226, 0.989);
-    min-height: 100dvh;
-    overflow: hidden;
-}
-.hero-section {
-    background-image: url(/img/Sunset\ Raja\ Ampat.jpg);
-    background-repeat: no-repeat;
+    background-image: url(/img/background.jpg);
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+    overflow: hidden;
+    margin: 0.3125rem; /* 5px */
+}
+.hero-section {
+
+    /* Container */
+    /* background-image: url(/img/Sunset\ Raja\ Ampat.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; */
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 12.5rem;
-    
+    border-radius: 5px 5px 0 0;
+    backdrop-filter: blur(3px);
+    /* Container */
+
+        /* Title */
     & .hero-title {
         background: rgba(178, 67, 67, 0.671);
         font-size: 1.3rem;
-        padding: 3px 7px;
         border-radius: 5px;
-        text-shadow: 10px 10px 20px black;
-        margin-bottom: 0.7rem;
+        text-shadow: 0 0 5px black;
+        margin-bottom: 0.7rem; /* 11.2px */
+        padding: 0.1875rem 0.4375rem; /* 3px 7px */
     }
+        /* Title */
+
+        /* Teks */
     & .hero-text {
         background: rgba(84, 123, 177, 0.671);
         font-size: 0.9rem;
-        padding: 5px 10px;
         border-radius: 5px;
-        text-shadow: 10px 10px 20px black;
-        margin-bottom: 0.7rem;
+        text-shadow: 0 0 5px black;
+        margin-bottom: 0.7rem; /* 11.2px */
+        padding: 0.3125rem 0.625rem; /* 5px 10px */
+    }
+        /* Teks */
+}
+
+.activities-section {
+    /* Container */
+    background-color: rgba(235, 229, 235, 0.644);
+    margin-top: 0.625rem; /* 10px */
+    padding-bottom: 0.625rem; /* 10px */
+
+    & .activities-title {
+        font-size: 0.9rem;
+        text-align: center;
+        padding: 0.3125rem 0; /* 5px 0 */
+    }
+    & .activities-img {
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+    }
+}
+
+.grid-section {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    padding: 0 0.3125rem; /* 0 5px */
+}
+
+.grid-flex {
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0 0.625rem; /* 0 10px */
+}
+
+@media (width >= 640px) {
+    .grid-section{
+    grid-template-columns: repeat(3, 1fr);
+    place-items: start;
+    }
+    .grid-flex {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem; /* 20px */
     }
 }
