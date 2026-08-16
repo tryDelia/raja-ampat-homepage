@@ -14,24 +14,19 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100dvh;
-    overflow: hidden;
     margin: 0.3125rem; /* 5px */
 }
-.hero-section {
 
+/* Hero Section */
+.hero-section {
     /* Container */
-    /* background-image: url(/img/Sunset\ Raja\ Ampat.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center; */
     color: white;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    text-align: center;
+    justify-content: center;
     border-radius: 5px 5px 0 0;
-    backdrop-filter: blur(3px);
+    margin-bottom: 0.625rem; /* 10px */
     /* Container */
 
         /* Title */
@@ -56,11 +51,14 @@ body {
     }
         /* Teks */
 }
+/* Hero Section */
 
+
+/* Activities Section */
 .activities-section {
     /* Container */
     background-color: rgba(235, 229, 235, 0.644);
-    margin-top: 0.625rem; /* 10px */
+    margin-bottom: 0.625rem; /* 10px */
     padding-bottom: 0.625rem; /* 10px */
 
     & .activities-title {
@@ -74,29 +72,94 @@ body {
         height: 3rem;
     }
 }
-
 .grid-section {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 10px;
     padding: 0 0.3125rem; /* 0 5px */
 }
-
 .grid-flex {
     font-size: 0.8rem;
     display: flex;
     align-items: center;
     gap: 0 0.625rem; /* 0 10px */
 }
+/* Activities Section */
 
+
+/* Facts Section */
+.facts-section {
+    /* Container */
+    background-color: rgba(84, 123, 177, 0.671);
+    flex-grow: 1;
+    color: white;
+    padding: 0.3125rem ; /* 5px */
+    /* Container */
+
+    /* Teks */
+    & .facts-teks {
+    margin: 1rem; /* 5px */
+    text-shadow: 0 0 2px black;
+    }
+    /* Teks */
+
+/* Fact 1 */
+    & .fact-1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    }
+
+}
+.fish-img {
+    width: 100%;
+    height: 9.375rem; /* 150px */
+    opacity: 90%;
+    border-radius: 0.625rem; /* 0 10px */
+}
+/* Fact 1 */
+
+/* Fact 2 */
+.fact-2-link {
+    background-color: rgb(70, 69, 69);
+    color: white;
+    font-size: 0.5rem;
+    border-radius: 10px;
+    padding: 3px 5px;
+
+    &:hover {
+        background-color: rgb(26, 25, 25);
+        transition: all 0.1s;
+    }
+}
+/* Fact 2 */
+/* Facts Section */
+
+
+/* Media query */
 @media (width >= 640px) {
-    .grid-section{
+    .grid-section {
     grid-template-columns: repeat(3, 1fr);
     place-items: start;
     }
     .grid-flex {
-        display: flex;
-        flex-direction: column;
-        gap: 1.25rem; /* 20px */
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem; /* 20px */
     }
+    /* .facts-1 {
+    display: flex;
+    justify-content: space-evenly;
+    } */
+    .fact-1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    }
+    .fish-img {
+    width: 100%;
+    height: 300px; /* 200px */
+    opacity: 90%;
+    border-radius: 0.625rem; /* 0 10px */
 }
+}
+/* Media query */
